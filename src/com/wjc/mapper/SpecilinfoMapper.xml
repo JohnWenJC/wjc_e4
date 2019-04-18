@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wjc.mapper.SpecilinfoMapper">
+
+    <select id="findCustomerByName" parameterType="java.util.Map" resultType="Specilinfo">
+        select * from ${biao} where #{column} like concat("%",#{name},"%") limit #{start},#{pageSize}
+    </select>
+</mapper>
